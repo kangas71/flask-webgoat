@@ -26,6 +26,7 @@ def login():
 def login_and_redirect():
     username = request.args.get("username")
     password = request.args.get("password")
+    # Bumping code down a line to see if it tracks correctly in Checkmarx.
     url = request.args.get("url")
     if username is None or password is None or url is None:
         return (
