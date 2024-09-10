@@ -16,7 +16,6 @@ def log_entry():
     access_level = user_info[2]
     if access_level > 2:
         return jsonify({"error": "access level < 2 is required for this action"})
-    # Bumping code down a line to see if it tracks correctly in Checkmarx.
     filename_param = request.form.get("filename")
     if filename_param is None:
         return jsonify({"error": "filename parameter is required"})
